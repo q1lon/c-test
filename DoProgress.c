@@ -1,3 +1,10 @@
+/*
+ * @Author: q1lon<keyron.zhang@gmail.com>
+ * @Date: 2020-12-30 11:21:37
+ * @LastEditTime: 2020-12-30 11:23:58
+ * @FilePath: /frist/DoProgress.c
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -13,7 +20,11 @@ const int IconMaxNum = 20;
 // 每隔100ms打印一次，这里同时每隔100ms会让进度加1
 const int PrintInterval = 100000;
 
-//打印进度条
+/**
+ * @description: 打印进度条
+ * @param {int} i 进度条进度
+ * @return {*}
+ */
 int doProgress(int i)
 {
     // -------------- 打印进度条 --------------

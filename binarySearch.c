@@ -1,7 +1,7 @@
 /*
- * @Author: q1lon<q1lon.zhang@gmail.com>
+ * @Author: q1lon<keyron.zhang@gmail.com>
  * @Date: 2020-11-24 11:09:00
- * @LastEditTime: 2020-12-30 09:39:01
+ * @LastEditTime: 2020-12-30 11:26:22
  * @FilePath: /frist/binarySearch.c
  */
 #include <stdio.h>

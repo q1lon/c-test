@@ -1,12 +1,19 @@
 /*
- * @Author: q1lon<q1lon.zhang@gmail.com>
+ * @Author: q1lon<keyron.zhang@gmail.com>
  * @Date: 2020-12-30 09:39:31
- * @LastEditTime: 2020-12-30 10:01:21
+ * @LastEditTime: 2020-12-30 11:26:13
  * @FilePath: /frist/callback.c
  */
 #include <stdlib.h>
 #include <stdio.h>
-// 回调函数
+
+/**
+ * @description: 回调函数
+ * @param {int} *array 数组
+ * @param {size_t} arraySize 数组大小
+ * @param {int} callback 回调函数
+ * @return {*}
+ */
 void populate_arr(int *array,size_t arraySize,int (*callback)(void)){
     for(size_t i=0;i<arraySize;i++)
         array[i]=callback();
