@@ -1,4 +1,4 @@
-CC = gcc #CC 表示选择的编译器（也可以改成 gcc）
+CC = gcc #CC 表示选择的编译器（也可以改成 g++）
 CFLAGS = -c -Wall #CFLAGS 表示编译选项，-c 即 g++ 中的 -c，-Wall 表示显示编译过程中遇到的所有 warning
 LFLAGS = -Wall #LFLAGS 表示链接选项，它就不加 -c 了
 NAME = test_write_log_file #编译后的名称
@@ -10,4 +10,4 @@ write_log.o:write_log.c
 	gcc -c write_log.c -o write_log.o
 .PHONY:clean
 clean:
-		rm -rf *.o $(NAME)
+		rm -rf *.o $(NAME) *.log *.txt
