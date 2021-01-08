@@ -1,10 +1,3 @@
-/*
- * @Author: q1lon<keyron.zhang@gmail.com>
- * @Date: 2020-12-30 11:21:37
- * @LastEditTime: 2020-12-30 11:23:58
- * @FilePath: /frist/DoProgress.c
- */
-
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -25,13 +18,11 @@ const int PrintInterval = 100000;
  * @param {int} i 进度条进度
  * @return {*}
  */
-int doProgress(int i)
-{
+int doProgress(int i) {
     // -------------- 打印进度条 --------------
     printf("[");
     int currentIndex = i / Step;
-    for (int j = 0; j < IconMaxNum; ++j)
-    {
+    for (int j = 0; j < IconMaxNum; ++j) {
         if (j < currentIndex)
             printf("%c", ProgressIcon); // 打印进度条标志
         else
@@ -48,19 +39,16 @@ int doProgress(int i)
 
     usleep(PrintInterval);
 
-    for (int j = 0; j < strlen(LastStr); ++j)
-    {
+    for (int j = 0; j < strlen(LastStr); ++j) {
         printf("\b"); // 回删字符，让数字和进度条原地变化
     }
     fflush(stdout);
     return 0;
 }
 
-int main(void)
-{
+int main(void) {
     printf("\n");
-    for (int i = 0; i <= 100; ++i)
-    {
+    for (int i = 0; i <= 100; ++i) {
         doProgress(i);
         // usleep(100000);
     }
